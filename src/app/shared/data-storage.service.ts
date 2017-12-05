@@ -7,7 +7,7 @@ import { RecipeService } from '../recipes/recipe.service';
 export class DataStorageService {
   constructor(private http: Http, private recipeService: RecipeService) {}
 
-  storeRecipes() {
+  putRecipes() {
     return this.http.put('https://ng-recipe-book-36d95.firebaseio.com/recipes.json', this.recipeService.getRecipes());
   }
 }
